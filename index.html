@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Muthukrishnan M- Personal Portfolio</title>
 
-
+`
   <!--
     - custom css link
   -->
@@ -19,15 +19,25 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script  src="https://cdn.emailjs.com/dist/email.min.js">
+  </script>
   <script>
-    emailjs.init("u7i8m2Bo8TT8gGnJW")
-    emailjs.send("service_9vvra9i","template_ogld0hk",{
-from_name: "alex",
-to_name: "muthu",
-message: "dfghjkl",
-from_email: "2215028@nec.edu.in",
-});
-    </script>
+    // Initialize EmailJS
+    emailjs.init("u7i8m2Bo8TT8gGnJW");
+
+    // Add form submit listener
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Send email using EmailJS
+      emailjs.sendForm("service_9vvra9i", "template_ogld0hk", this)
+        .then(function() {
+          alert("Email sent successfully!");
+        }, function(error) {
+          alert("Failed to send email. Error: " + JSON.stringify(error));
+        });
+    });
+  </script>
 </head>
 
 <body>
@@ -79,7 +89,7 @@ from_email: "2215028@nec.edu.in",
             <div class="contact-info">
               <p class="contact-title">Email</p>
 
-              <a href="mailto:richard@example.com" class="contact-link">muthukrishnan@gmail.com</a>
+              <a href="mailto:muthukrishnan07212004@gmail.com" class="contact-link">muthukrishnan07212004@gmail.com</a>
             </div>
 
           </li>
@@ -307,111 +317,7 @@ from_email: "2215028@nec.edu.in",
         </section>
 
 
-        <!--
-          - testimonials
-        -->
-
-        <!-- <section class="testimonials">
-
-          <h3 class="h3 testimonials-title">Team Mates</h3>
-
-          <ul class="testimonials-list has-scrollbar">
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </section>
- -->                                                         <!----use add team members data-->
-        <!--
-          - testimonials modal
-        -->
+       
 
         <div class="modal-container" data-modal-container>
 
